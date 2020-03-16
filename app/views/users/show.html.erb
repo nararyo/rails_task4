@@ -1,3 +1,4 @@
-<% @items.each do |item| %>
-  <p><%= item.name %>：<%= item.price %></p>
+<% @user.items.each do |item| %>
+  <%= item.user.nickname.present? ? "#{item.user.nickname}" : "会員NO #{item.user.id}" %>さんが購入したもの
+  <p>タイトル：<%= item.name %>：<%= item.price %>円</p>
 <% end %>
